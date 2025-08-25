@@ -1,0 +1,118 @@
+# .htaccess for BD Bill Calculator - Bangladesh Electricity Bill Calculator
+# Advanced SEO optimizations
+
+# Enable URL Rewriting
+RewriteEngine On
+
+# Force HTTPS redirect
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Remove trailing slash
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{THE_REQUEST} \s(.+?)/+(\?\S*)?\s [NC]
+RewriteRule ^(.+?)/+$ /$1 [R=301,L]
+
+# Custom 404 page
+ErrorDocument 404 /404.html
+
+# Security Headers for SEO
+<IfModule mod_headers.c>
+    # Content Security Policy
+    Header always set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com; style-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com; img-src 'self' data:; font-src 'self' https://fonts.gstatic.com; connect-src 'self'"
+    
+    # X-Frame-Options
+    Header always set X-Frame-Options "SAMEORIGIN"
+    
+    # X-Content-Type-Options
+    Header always set X-Content-Type-Options "nosniff"
+    
+    # Referrer Policy
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+    
+    # Permissions Policy
+    Header always set Permissions-Policy "geolocation=(), microphone=(), camera=(), payment=(), usb=(), magnetometer=(), gyroscope=(), accelerometer=()"
+</IfModule>
+
+# Compression for faster loading
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html
+    AddOutputFilterByType DEFLATE text/css
+    AddOutputFilterByType DEFLATE text/javascript
+    AddOutputFilterByType DEFLATE text/xml
+    AddOutputFilterByType DEFLATE text/plain
+    AddOutputFilterByType DEFLATE image/x-icon
+    AddOutputFilterByType DEFLATE image/svg+xml
+    AddOutputFilterByType DEFLATE application/rss+xml
+    AddOutputFilterByType DEFLATE application/javascript
+    AddOutputFilterByType DEFLATE application/x-javascript
+    AddOutputFilterByType DEFLATE application/xml
+    AddOutputFilterByType DEFLATE application/xhtml+xml
+    AddOutputFilterByType DEFLATE application/x-font
+    AddOutputFilterByType DEFLATE application/x-font-truetype
+    AddOutputFilterByType DEFLATE application/x-font-ttf
+    AddOutputFilterByType DEFLATE application/x-font-otf
+    AddOutputFilterByType DEFLATE application/x-font-opentype
+    AddOutputFilterByType DEFLATE application/vnd.ms-fontobject
+    AddOutputFilterByType DEFLATE font/ttf
+    AddOutputFilterByType DEFLATE font/otf
+    AddOutputFilterByType DEFLATE font/opentype
+</IfModule>
+
+# Browser Caching for better performance
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresByType text/css "access plus 1 year"
+    ExpiresByType application/javascript "access plus 1 year"
+    ExpiresByType application/x-javascript "access plus 1 year"
+    ExpiresByType text/javascript "access plus 1 year"
+    ExpiresByType image/x-icon "access plus 1 year"
+    ExpiresByType image/png "access plus 1 year"
+    ExpiresByType image/jpg "access plus 1 year"
+    ExpiresByType image/jpeg "access plus 1 year"
+    ExpiresByType image/gif "access plus 1 year"
+    ExpiresByType image/svg+xml "access plus 1 year"
+    ExpiresByType text/html "access plus 1 day"
+    ExpiresByType application/json "access plus 1 day"
+    ExpiresByType application/xml "access plus 1 day"
+    ExpiresByType text/xml "access plus 1 day"
+</IfModule>
+
+# MIME Types
+<IfModule mod_mime.c>
+    AddType application/javascript .js
+    AddType text/css .css
+    AddType application/json .json
+    AddType application/manifest+json .webmanifest
+    AddType image/svg+xml .svg
+    AddType image/x-icon .ico
+    AddType font/woff .woff
+    AddType font/woff2 .woff2
+    AddType font/ttf .ttf
+    AddType font/otf .otf
+</IfModule>
+
+# SEO-friendly URLs for calculator pages
+RewriteRule ^bpdb-calculator/?$ /?provider=bpdb [L,QSA]
+RewriteRule ^desco-calculator/?$ /?provider=desco [L,QSA]
+RewriteRule ^dpdc-calculator/?$ /?provider=dpdc [L,QSA]
+RewriteRule ^wzpdcl-calculator/?$ /?provider=wzpdcl [L,QSA]
+RewriteRule ^bangladesh-electricity-rates-2025/?$ /?page=rates [L,QSA]
+RewriteRule ^energy-saving-tips-bangladesh/?$ /?page=tips [L,QSA]
+RewriteRule ^appliance-power-consumption-bangladesh/?$ /?page=appliances [L,QSA]
+
+# Prevent access to sensitive files
+<Files ~ "^\.">
+    Order allow,deny
+    Deny from all
+</Files>
+
+<Files ~ "\.log$">
+    Order allow,deny
+    Deny from all
+</Files>
+
+# Allow search engine bots
+<FilesMatch "(robots\.txt|sitemap\.xml)$">
+    Allow from all
+</FilesMatch>

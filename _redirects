@@ -1,0 +1,21 @@
+# Netlify redirects for BD Bill Calculator
+
+# Force HTTPS
+http://bdbillcalculator.netlify.app/* https://bdbillcalculator.netlify.app/:splat 301!
+
+# SEO-friendly URLs for calculator pages
+/bpdb-calculator /index.html?provider=bpdb 200
+/desco-calculator /index.html?provider=desco 200
+/dpdc-calculator /index.html?provider=dpdc 200
+/wzpdcl-calculator /index.html?provider=wzpdcl 200
+/bangladesh-electricity-rates-2025 /index.html?page=rates 200
+/energy-saving-tips-bangladesh /index.html?page=tips 200
+/appliance-power-consumption-bangladesh /index.html?page=appliances 200
+
+# About and legal pages
+/about /index.html?page=about 200
+/privacy-policy /index.html?page=privacy 200
+/terms-of-service /index.html?page=terms 200
+
+# Fallback for SPA (must be last)
+/* /index.html 200

@@ -1,0 +1,61 @@
+# robots.txt for BD Bill Calculator - Bangladesh Electricity Bill Calculator
+# https://bdbillcalculator.netlify.app/
+
+User-agent: *
+Allow: /
+
+# Allow all major search engines
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
+
+User-agent: YandexBot
+Allow: /
+
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+# Disallow certain files/directories (if any)
+Disallow: /admin/
+Disallow: /private/
+Disallow: /*.pdf$
+Disallow: /temp/
+
+# Allow important files
+Allow: /sitemap.xml
+Allow: /manifest.json
+Allow: /favicon.ico
+Allow: /*.css
+Allow: /*.js
+Allow: /*.png
+Allow: /*.jpg
+Allow: /*.gif
+Allow: /*.svg
+
+# Sitemap location
+Sitemap: https://bdbillcalculator.netlify.app/sitemap.xml
+
+# Crawl-delay for respectful crawling
+Crawl-delay: 1
+
+# Bangladesh specific search engines
+User-agent: BanglaBot
+Allow: /
+
+# Additional directives for better SEO
+# Host directive (optional, some search engines support this)
+Host: https://bdbillcalculator.netlify.app

@@ -1,0 +1,100 @@
+{
+    "name": "Bangladesh Electricity Bill Calculator - BD Bill Calculator",
+    "short_name": "BD Bill Calc",
+    "description": "Calculate Bangladesh electricity bill online with accurate cost estimates for BPDB, DESCO, DPDC, WZPDCL. Track appliance consumption and save on energy bills with current 2025 unit rates.",
+    "start_url": "/",
+    "scope": "/",
+    "display": "standalone",
+    "orientation": "portrait-primary",
+    "background_color": "#f9fafb",
+    "theme_color": "#3B82F6",
+    "categories": [
+        "utilities",
+        "productivity",
+        "finance"
+    ],
+    "lang": "en-BD",
+    "dir": "ltr",
+    "screenshots": [
+        {
+            "src": "/screenshot-mobile.png",
+            "sizes": "320x640",
+            "type": "image/png",
+            "platform": "narrow",
+            "label": "BD Bill Calculator on mobile"
+        },
+        {
+            "src": "/screenshot-desktop.png",
+            "sizes": "1280x720",
+            "type": "image/png",
+            "platform": "wide",
+            "label": "BD Bill Calculator on desktop"
+        }
+    ],
+    "icons": [
+        {
+            "src": "/favicon.ico",
+            "sizes": "48x48 64x64 96x96 128x128 256x256",
+            "type": "image/x-icon"
+        },
+        {
+            "src": "/android-chrome-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/android-chrome-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        },
+        {
+            "src": "/apple-touch-icon.png",
+            "sizes": "180x180",
+            "type": "image/png"
+        }
+    ],
+    "shortcuts": [
+        {
+            "name": "Calculate Bill",
+            "short_name": "Calculate",
+            "description": "Start calculating your electricity bill",
+            "url": "/#calculator",
+            "icons": [
+                {
+                    "src": "/shortcut-calculator.png",
+                    "sizes": "96x96"
+                }
+            ]
+        },
+        {
+            "name": "Energy Tips",
+            "short_name": "Tips",
+            "description": "View energy saving tips for Bangladesh",
+            "url": "/#energy-tips",
+            "icons": [
+                {
+                    "src": "/shortcut-tips.png",
+                    "sizes": "96x96"
+                }
+            ]
+        },
+        {
+            "name": "FAQ",
+            "short_name": "Help",
+            "description": "Frequently asked questions about electricity bills",
+            "url": "/#faq",
+            "icons": [
+                {
+                    "src": "/shortcut-faq.png",
+                    "sizes": "96x96"
+                }
+            ]
+        }
+    ],
+    "related_applications": [],
+    "prefer_related_applications": false,
+    "iarc_rating_id": "e84b072d-71b3-4d3e-86ae-31a8ce4e53b7",
+    "edge_side_panel": {
+        "preferred_width": 400
+    }
+}
