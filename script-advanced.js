@@ -41,15 +41,35 @@ document.addEventListener("DOMContentLoaded", function () {
 function initializeDarkMode() {
   if (isDarkMode) {
     document.documentElement.classList.add("dark");
+    
+    // Desktop icons
     if (sunIcon) sunIcon.classList.add("hidden");
     if (moonIcon) moonIcon.classList.remove("hidden");
+    
+    // Mobile icons
+    const darkModeToggleMobile = document.getElementById("dark-mode-toggle-mobile");
+    if (darkModeToggleMobile) {
+      const mobileSunIcon = darkModeToggleMobile.querySelector("svg:first-child");
+      const mobileMoonIcon = darkModeToggleMobile.querySelector("svg:last-child");
+      
+      if (mobileSunIcon && mobileMoonIcon) {
+        mobileSunIcon.classList.add("hidden");
+        mobileMoonIcon.classList.remove("hidden");
+      }
+    }
   }
 }
 
 function setupEventListeners() {
-  // Dark Mode Toggle
+  // Dark Mode Toggle - Desktop
   if (darkModeToggle) {
     darkModeToggle.addEventListener("click", toggleDarkMode);
+  }
+
+  // Dark Mode Toggle - Mobile
+  const darkModeToggleMobile = document.getElementById("dark-mode-toggle-mobile");
+  if (darkModeToggleMobile) {
+    darkModeToggleMobile.addEventListener("click", toggleDarkMode);
   }
 
   // Quick Add Buttons - Use event delegation since buttons are added dynamically
@@ -59,9 +79,15 @@ function setupEventListeners() {
     }
   });
 
-  // Export Button
+  // Export Button - Desktop
   if (exportBtn) {
     exportBtn.addEventListener("click", exportResults);
+  }
+
+  // Export Button - Mobile
+  const exportBtnMobile = document.getElementById("export-btn-mobile");
+  if (exportBtnMobile) {
+    exportBtnMobile.addEventListener("click", exportResults);
   }
 
   // View Toggle
@@ -87,14 +113,44 @@ function toggleDarkMode() {
   isDarkMode = !isDarkMode;
   localStorage.setItem("darkMode", isDarkMode.toString());
 
+  // Update document class
   if (isDarkMode) {
     document.documentElement.classList.add("dark");
-    if (sunIcon) sunIcon.classList.add("hidden");
-    if (moonIcon) moonIcon.classList.remove("hidden");
   } else {
     document.documentElement.classList.remove("dark");
-    if (sunIcon) sunIcon.classList.remove("hidden");
-    if (moonIcon) moonIcon.classList.add("hidden");
+  }
+
+  // Update desktop icons
+  if (sunIcon) {
+    if (isDarkMode) {
+      sunIcon.classList.add("hidden");
+    } else {
+      sunIcon.classList.remove("hidden");
+    }
+  }
+  if (moonIcon) {
+    if (isDarkMode) {
+      moonIcon.classList.remove("hidden");
+    } else {
+      moonIcon.classList.add("hidden");
+    }
+  }
+
+  // Update mobile icons
+  const darkModeToggleMobile = document.getElementById("dark-mode-toggle-mobile");
+  if (darkModeToggleMobile) {
+    const mobileSunIcon = darkModeToggleMobile.querySelector("svg:first-child");
+    const mobileMoonIcon = darkModeToggleMobile.querySelector("svg:last-child");
+    
+    if (mobileSunIcon && mobileMoonIcon) {
+      if (isDarkMode) {
+        mobileSunIcon.classList.add("hidden");
+        mobileMoonIcon.classList.remove("hidden");
+      } else {
+        mobileSunIcon.classList.remove("hidden");
+        mobileMoonIcon.classList.add("hidden");
+      }
+    }
   }
 
   showNotification(`${isDarkMode ? "Dark" : "Light"} mode enabled`, "info");
@@ -232,35 +288,43 @@ function renderList() {
     applianceCard.className =
       "bg-white dark:bg-dark-800 border border-blue-200 dark:border-dark-600 rounded-xl p-4 hover:shadow-lg hover:border-blue-400 transition-all duration-300 animate-slide-up";
     applianceCard.innerHTML = `
-            <div class="flex items-center justify-between">
-                <div class="flex-1">
-                    <div class="flex items-center mb-2">
-                        <div class="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center mr-3 shadow-lg">
+            <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between">
+                <div class="flex-1 min-w-0">
+                    <div class="flex items-start sm:items-center mb-3 sm:mb-2">
+                        <div class="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center mr-3 shadow-lg flex-shrink-0">
                             <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
                             </svg>
                         </div>
-                        <div>
-                            <h4 class="font-semibold text-gray-800 dark:text-dark-200 text-lg">${
+                        <div class="min-w-0 flex-1">
+                            <h4 class="font-semibold text-gray-800 dark:text-dark-200 text-base sm:text-lg truncate">${
                               appliance.name
                             }</h4>
-                            <p class="text-sm text-gray-600 dark:text-dark-400">${
+                            <p class="text-xs sm:text-sm text-gray-600 dark:text-dark-400 break-words">${
                               appliance.power
                             }W • ${appliance.hours}hrs/day • ${
       appliance.days
     } days/month</p>
                         </div>
+                        <button 
+                            aria-label="Remove ${appliance.name}" 
+                            class="ml-2 sm:hidden p-2 bg-red-500 text-white rounded-lg hover:bg-red-600 transition-all duration-200 shadow-lg flex-shrink-0" 
+                            data-idx="${idx}">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"></path>
+                            </svg>
+                        </button>
                     </div>
-                    <div class="grid grid-cols-2 gap-4 ml-13">
-                        <div class="bg-blue-50 dark:bg-dark-700 rounded-lg p-3 border border-blue-200 dark:border-dark-600">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-4 pl-0 sm:pl-13">
+                        <div class="bg-blue-50 dark:bg-dark-700 rounded-lg p-2 sm:p-3 border border-blue-200 dark:border-dark-600">
                             <p class="text-xs text-gray-500 dark:text-dark-400 uppercase tracking-wide">Monthly Consumption</p>
-                            <p class="text-lg font-bold text-blue-600 dark:text-blue-400">${appliance.kwh.toFixed(
+                            <p class="text-sm sm:text-lg font-bold text-blue-600 dark:text-blue-400">${appliance.kwh.toFixed(
                               2
                             )} kWh</p>
                         </div>
-                        <div class="bg-blue-50 dark:bg-dark-700 rounded-lg p-3 border border-blue-200 dark:border-dark-600">
+                        <div class="bg-blue-50 dark:bg-dark-700 rounded-lg p-2 sm:p-3 border border-blue-200 dark:border-dark-600">
                             <p class="text-xs text-gray-500 dark:text-dark-400 uppercase tracking-wide">Monthly Cost</p>
-                            <p class="text-lg font-bold text-blue-600 dark:text-blue-400">৳${appliance.cost.toFixed(
+                            <p class="text-sm sm:text-lg font-bold text-blue-600 dark:text-blue-400">৳${appliance.cost.toFixed(
                               2
                             )}</p>
                         </div>
@@ -268,7 +332,7 @@ function renderList() {
                 </div>
                 <button 
                     aria-label="Remove ${appliance.name}" 
-                    class="ml-4 p-2 bg-red-500 text-white rounded-lg hover:bg-red-600 transform hover:scale-110 transition-all duration-200 shadow-lg" 
+                    class="hidden sm:block ml-4 p-2 bg-red-500 text-white rounded-lg hover:bg-red-600 transform hover:scale-110 transition-all duration-200 shadow-lg flex-shrink-0" 
                     data-idx="${idx}">
                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"></path>
@@ -712,25 +776,13 @@ function showNotification(message, type = "info") {
   }, 4000);
 }
 
-// Load sample data on first visit
+// Load sample data on first visit (disabled - users start with empty list)
 function loadSampleData() {
-  if (appliances.length === 0 && !localStorage.getItem("bd-calc-visited")) {
-    const sampleAppliances = [
-      { name: "LED TV", power: 150, hours: 6, days: 30 },
-      { name: "Ceiling Fan", power: 75, hours: 12, days: 30 },
-    ];
-
-    const unitPrice = parseFloat(unitPriceInput.value);
-    sampleAppliances.forEach((sample) => {
-      const kwh = calculateKwh(sample.power, sample.hours, sample.days);
-      const cost = calculateCost(kwh, unitPrice);
-      appliances.push({ ...sample, kwh, cost });
-    });
-
-    renderList();
+  // Mark as visited to prevent future sample loading
+  if (!localStorage.getItem("bd-calc-visited")) {
     localStorage.setItem("bd-calc-visited", "true");
-    showNotification("Sample appliances loaded to get you started!", "info");
   }
+  // No automatic sample appliances - users will add their own
 }
 
 // PWA: Register service worker (optimized)
