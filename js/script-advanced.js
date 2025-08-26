@@ -41,17 +41,21 @@ document.addEventListener("DOMContentLoaded", function () {
 function initializeDarkMode() {
   if (isDarkMode) {
     document.documentElement.classList.add("dark");
-    
+
     // Desktop icons
     if (sunIcon) sunIcon.classList.add("hidden");
     if (moonIcon) moonIcon.classList.remove("hidden");
-    
+
     // Mobile icons
-    const darkModeToggleMobile = document.getElementById("dark-mode-toggle-mobile");
+    const darkModeToggleMobile = document.getElementById(
+      "dark-mode-toggle-mobile"
+    );
     if (darkModeToggleMobile) {
-      const mobileSunIcon = darkModeToggleMobile.querySelector("svg:first-child");
-      const mobileMoonIcon = darkModeToggleMobile.querySelector("svg:last-child");
-      
+      const mobileSunIcon =
+        darkModeToggleMobile.querySelector("svg:first-child");
+      const mobileMoonIcon =
+        darkModeToggleMobile.querySelector("svg:last-child");
+
       if (mobileSunIcon && mobileMoonIcon) {
         mobileSunIcon.classList.add("hidden");
         mobileMoonIcon.classList.remove("hidden");
@@ -67,7 +71,9 @@ function setupEventListeners() {
   }
 
   // Dark Mode Toggle - Mobile
-  const darkModeToggleMobile = document.getElementById("dark-mode-toggle-mobile");
+  const darkModeToggleMobile = document.getElementById(
+    "dark-mode-toggle-mobile"
+  );
   if (darkModeToggleMobile) {
     darkModeToggleMobile.addEventListener("click", toggleDarkMode);
   }
@@ -137,11 +143,13 @@ function toggleDarkMode() {
   }
 
   // Update mobile icons
-  const darkModeToggleMobile = document.getElementById("dark-mode-toggle-mobile");
+  const darkModeToggleMobile = document.getElementById(
+    "dark-mode-toggle-mobile"
+  );
   if (darkModeToggleMobile) {
     const mobileSunIcon = darkModeToggleMobile.querySelector("svg:first-child");
     const mobileMoonIcon = darkModeToggleMobile.querySelector("svg:last-child");
-    
+
     if (mobileSunIcon && mobileMoonIcon) {
       if (isDarkMode) {
         mobileSunIcon.classList.add("hidden");
@@ -789,7 +797,7 @@ function loadSampleData() {
 if ("serviceWorker" in navigator) {
   window.addEventListener("load", function () {
     navigator.serviceWorker
-      .register("sw.js")
+      .register("js/sw.js")
       .then(function () {
         // Service worker registered successfully (silent)
       })
