@@ -35,16 +35,24 @@ Disallow: /private/
 Disallow: /*.pdf$
 Disallow: /temp/
 
-# Allow important files
+# Allow important files and directories
 Allow: /sitemap.xml
 Allow: /manifest.json
 Allow: /favicon.ico
+Allow: /blog/
+Allow: /privacy.html
+Allow: /terms.html
+Allow: /energy-tips.html
+Allow: /about.html
+Allow: /contact.html
 Allow: /*.css
 Allow: /*.js
 Allow: /*.png
 Allow: /*.jpg
 Allow: /*.gif
 Allow: /*.svg
+Allow: /assets/
+Allow: /config/
 
 # Sitemap location
 Sitemap: https://bdbillcalculator.netlify.app/sitemap.xml

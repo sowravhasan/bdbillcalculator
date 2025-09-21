@@ -9,13 +9,26 @@ http://bdbillcalculator.netlify.app/* https://bdbillcalculator.netlify.app/:spla
 /dpdc-calculator /index.html?provider=dpdc 200
 /wzpdcl-calculator /index.html?provider=wzpdcl 200
 /bangladesh-electricity-rates-2025 /index.html?page=rates 200
-/energy-saving-tips-bangladesh /index.html?page=tips 200
+/energy-saving-tips-bangladesh /energy-tips.html 301
 /appliance-power-consumption-bangladesh /index.html?page=appliances 200
 
-# About and legal pages
-/about /index.html?page=about 200
-/privacy-policy /index.html?page=privacy 200
-/terms-of-service /index.html?page=terms 200
+# Redirect old URLs to new structure
+/about /about.html 301
+/privacy-policy /privacy.html 301
+/terms-of-service /terms.html 301
+/contact /contact.html 301
+/energy-tips /energy-tips.html 301
+/blog /blog.html 301
 
-# Fallback for SPA (must be last)
+# Handle blog article URLs (if any old structure exists)
+/articles/* /blog/:splat 301
+/posts/* /blog/:splat 301
+
+# Admin and dashboard (if needed in future)
+/admin/* /admin/index.html 200
+
+# API routes (if added in future)
+/api/* /.netlify/functions/:splat 200
+
+# Fallback - but not for existing files
 /* /index.html 200

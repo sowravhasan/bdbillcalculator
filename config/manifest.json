@@ -1,7 +1,7 @@
 {
     "name": "Bangladesh Electricity Bill Calculator - BD Bill Calculator",
     "short_name": "BD Bill Calc",
-    "description": "Calculate Bangladesh electricity bill online with accurate cost estimates for BPDB, DESCO, DPDC, WZPDCL. Track appliance consumption and save on energy bills with current 2025 unit rates.",
+    "description": "Calculate Bangladesh electricity bill online with accurate cost estimates for BPDB, DESCO, DPDC, WZPDCL. Track appliance consumption, read expert energy guides, and save on energy bills with current 2025 unit rates.",
     "start_url": "/",
     "scope": "/",
     "display": "standalone",
@@ -62,10 +62,22 @@
             ]
         },
         {
+            "name": "Energy Blog",
+            "short_name": "Blog",
+            "description": "Read expert energy saving tips and guides",
+            "url": "/blog.html",
+            "icons": [
+                {
+                    "src": "/shortcut-blog.png",
+                    "sizes": "96x96"
+                }
+            ]
+        },
+        {
             "name": "Energy Tips",
             "short_name": "Tips",
             "description": "View energy saving tips for Bangladesh",
-            "url": "/#energy-tips",
+            "url": "/energy-tips.html",
             "icons": [
                 {
                     "src": "/shortcut-tips.png",

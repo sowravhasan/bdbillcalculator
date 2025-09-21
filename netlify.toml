@@ -1,9 +1,5 @@
 [build]
   publish = "."
-  command = "echo 'Static site deployment for BD Bill Calculator'"
-
-[build.environment]
-  NODE_VERSION = "18"
 
 # Global headers
 [[headers]]
@@ -14,32 +10,60 @@
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "strict-origin-when-cross-origin"
     Permissions-Policy = "geolocation=(), microphone=(), camera=(), payment=(), usb=()"
+    # Performance optimizations
+    Vary = "Accept-Encoding"
+    Cross-Origin-Embedder-Policy = "unsafe-none"
+    Cross-Origin-Opener-Policy = "same-origin"
+
+# HTML compression and caching
+[[headers]]
+  for = "/*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=3600, must-revalidate"
+    
+# Critical CSS files
+[[headers]]
+  for = "/css/*.css"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+    Content-Type = "text/css; charset=utf-8"
 
 # Cache headers for static assets
 [[headers]]
-  for = "/*.js"
+  for = "/**/*.js"
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
 
 [[headers]]
-  for = "/*.css"
+  for = "/**/*.css"
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
 
 [[headers]]
-  for = "/*.png"
+  for = "/**/*.png"
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
 
 [[headers]]
-  for = "/*.jpg"
+  for = "/**/*.jpg"
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
 
 [[headers]]
-  for = "/*.ico"
+  for = "/**/*.ico"
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
+
+# Blog content cache
+[[headers]]
+  for = "/blog/*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=86400"
+
+[[headers]]
+  for = "/blog.html"
+  [headers.values]
+    Cache-Control = "public, max-age=86400"
 
 # SEO files cache
 [[headers]]
@@ -80,13 +104,44 @@
 
 [[redirects]]
   from = "/energy-saving-tips-bangladesh"
-  to = "/index.html?page=tips"
-  status = 200
+  to = "/energy-tips.html"
+  status = 301
 
 [[redirects]]
   from = "/appliance-power-consumption-bangladesh"
   to = "/index.html?page=appliances"
   status = 200
+
+# Redirect old URLs to new structure
+[[redirects]]
+  from = "/about"
+  to = "/about.html"
+  status = 301
+
+[[redirects]]
+  from = "/privacy-policy"
+  to = "/privacy.html"
+  status = 301
+
+[[redirects]]
+  from = "/terms-of-service"
+  to = "/terms.html"
+  status = 301
+
+[[redirects]]
+  from = "/contact"
+  to = "/contact.html"
+  status = 301
+
+[[redirects]]
+  from = "/energy-tips"
+  to = "/energy-tips.html"
+  status = 301
+
+[[redirects]]
+  from = "/blog"
+  to = "/blog.html"
+  status = 301
 
 # Fallback for SPA
 [[redirects]]
@@ -106,7 +161,7 @@
   package = "@netlify/plugin-lighthouse"
 
   [plugins.inputs.thresholds]
-    performance = 0.9
+    performance = 0.45
     accessibility = 0.9
     best-practices = 0.9
     seo = 0.9

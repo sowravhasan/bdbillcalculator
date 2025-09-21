@@ -1,0 +1,11 @@
+{
+    "name": "bd-electricity-calculator",
+    "version": "1.0.0",
+    "private": true,
+    "scripts": {
+        "build": "tailwindcss -i ./src/styles.css -o ./assets/css/tailwind.css --minify"
+    },
+    "devDependencies": {
+        "tailwindcss": "^3.4.10"
+    }
+}

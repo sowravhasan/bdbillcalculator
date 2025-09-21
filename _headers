@@ -8,9 +8,20 @@
   Referrer-Policy: strict-origin-when-cross-origin
   Permissions-Policy: geolocation=(), microphone=(), camera=(), payment=(), usb=(), magnetometer=(), gyroscope=(), accelerometer=()
 
-# HTML files - short cache for updates
+# HTML files - optimized cache for SEO
 /*.html
-  Cache-Control: public, max-age=0, must-revalidate
+  Cache-Control: public, max-age=3600, must-revalidate
+
+# Blog articles - longer cache since they're more static
+/blog/*.html
+  Cache-Control: public, max-age=86400, must-revalidate
+
+# Legal pages - longer cache since they change rarely  
+/privacy.html
+  Cache-Control: public, max-age=604800, must-revalidate
+
+/terms.html
+  Cache-Control: public, max-age=604800, must-revalidate
 
 # JavaScript files - long cache with immutable
 /*.js
@@ -55,16 +66,24 @@
 /*.otf
   Cache-Control: public, max-age=31536000, immutable
 
-# SEO files - daily cache
+# SEO and PWA files - optimized cache
 /sitemap.xml
   Cache-Control: public, max-age=86400
+  Content-Type: application/xml; charset=utf-8
 
 /robots.txt
   Cache-Control: public, max-age=86400
+  Content-Type: text/plain; charset=utf-8
 
 # Manifest and PWA files
 /manifest.json
   Cache-Control: public, max-age=86400
+  Content-Type: application/manifest+json; charset=utf-8
+
+/config/manifest.json
+  Cache-Control: public, max-age=86400
+  Content-Type: application/manifest+json; charset=utf-8
 
 /sw.js
   Cache-Control: public, max-age=0, must-revalidate
+  Content-Type: application/javascript; charset=utf-8

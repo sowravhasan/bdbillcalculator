@@ -4,7 +4,7 @@
 
 [![Live Demo](https://img.shields.io/badge/Live-Demo-blue?style=for-the-badge)](https://bdbillcalculator.netlify.app/)
 [![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](LICENSE)
-[![Developer](https://img.shields.io/badge/Developer-Sowrav%20Hasan-orange?style=for-the-badge)](https://sowravhasan.vercel.app/)
+[![Developer](https://img.shields.io/badge/Developer-Sowrav%20Hasan-orange?style=for-the-badge)](https://sowravhasan.github.io/)
 
 ## 🎯 Purpose
 
@@ -297,7 +297,7 @@ This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) 
 ### **Sowrav Hasan**
 **Full-Stack Developer & UI/UX Designer**
 
-🌐 **Portfolio**: [https://sowravhasan.vercel.app/](https://sowravhasan.vercel.app/)
+🌐 **Portfolio**: [https://sowravhasan.github.io/](https://sowravhasan.github.io/)
 
 **Skills & Expertise**:
 - Frontend Development (HTML, CSS, JavaScript, React)

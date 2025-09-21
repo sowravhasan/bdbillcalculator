@@ -1,0 +1,816 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bangladesh Electricity Bill Analysis Guide (DESCO/DPDC/BPDB)</title>
+    <meta name="description"
+        content="Read your Bangladesh electricity bill line-by-line. Understand tariff slabs, fuel adjustment, meter rent, VAT, and common billing errors to save money." />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://bdbillcalculator.netlify.app/blog/electricity-bill-analysis-guide.html" />
+
+    <meta property="og:title" content="Bangladesh Electricity Bill Analysis Guide" />
+    <meta property="og:description" content="Understand hidden charges and how to reduce your bill." />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://bdbillcalculator.netlify.app/blog/electricity-bill-analysis-guide.html" />
+    <meta property="og:image" content="https://bdbillcalculator.netlify.app/assets/images/bdbillcalculator.jpg" />
+
+    <meta name="google-adsense-account" content="ca-pub-1255729468967104">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1255729468967104"
+        crossorigin="anonymous"></script>
+
+    <link rel="icon" type="image/png" href="/assets/icons/favicon.png" />
+    <link rel="manifest" href="/config/manifest.json" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = { darkMode: 'class', theme: { extend: { fontFamily: { 'sans': ['Inter', 'system-ui', 'Segoe UI', 'Roboto', 'Arial', 'sans-serif'] } } } };
+    </script>
+
+    <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"BlogPosting","headline":"Bangladesh Electricity Bill Analysis Guide","datePublished":"2025-09-09T09:00:00+06:00","dateModified":"2025-09-19T16:22:00+06:00","author":{"@type":"Person","name":"Sowrav Hasan"},"publisher":{"@type":"Organization","name":"BD Bill Calculator","logo":{"@type":"ImageObject","url":"https://bdbillcalculator.netlify.app/assets/icons/favicon.png"}}}
+  </script>
+</head>
+
+<body class="bg-gray-50 dark:bg-gray-900 min-h-screen font-sans antialiased overflow-x-hidden">
+    <header
+        class="bg-white dark:bg-gray-800 shadow-lg border-b border-gray-100 dark:border-gray-700 sticky top-0 z-50 transition-colors duration-300">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex items-center justify-between h-16">
+                <!-- Logo and Brand -->
+                <div class="flex items-center space-x-3">
+                    <a href="/" class="flex items-center space-x-2 group">
+                        <div
+                            class="w-8 h-8 bg-blue-600 dark:bg-blue-500 rounded-lg flex items-center justify-center group-hover:bg-blue-700 dark:group-hover:bg-blue-400 transition-colors duration-200">
+                            <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                            </svg>
+                        </div>
+                        <span
+                            class="font-bold text-lg text-gray-900 dark:text-gray-100 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-200">BD
+                            Bill Calculator</span>
+                    </a>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a href="/"
+                        class="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200">Calculator</a>
+                    <a href="/blog.html" class="text-blue-600 dark:text-blue-400 font-semibold">Blog</a>
+                    <a href="/energy-tips.html"
+                        class="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200">Energy
+                        Tips</a>
+                    <a href="/about.html"
+                        class="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200">About</a>
+                    <a href="/contact.html"
+                        class="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200">Contact</a>
+                </nav>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" type="button"
+                        class="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 p-2 rounded-md transition-colors duration-200">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Navigation -->
+            <div id="mobile-menu" class="md:hidden hidden border-t border-gray-200 dark:border-gray-700 py-4">
+                <div class="flex flex-col space-y-4">
+                    <a href="/"
+                        class="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200 px-4 py-2">Calculator</a>
+                    <a href="/blog.html" class="text-blue-600 dark:text-blue-400 font-semibold px-4 py-2">Blog</a>
+                    <a href="/energy-tips.html"
+                        class="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200 px-4 py-2">Energy
+                        Tips</a>
+                    <a href="/about.html"
+                        class="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200 px-4 py-2">About</a>
+                    <a href="/contact.html"
+                        class="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200 px-4 py-2">Contact</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-4xl mx-auto px-4 py-8 word-wrap break-words">
+        <nav class="text-sm mb-6"><a class="text-blue-600" href="/">Home</a> <span class="text-gray-500">/</span> <a
+                class="text-blue-600" href="/blog.html">Blog</a> <span class="text-gray-500">/</span> <span>Bill
+                Analysis Guide</span></nav>
+
+        <article
+            class="bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700 rounded-2xl shadow-xl overflow-hidden">
+            <div class="h-56 bg-gradient-to-r from-red-600 to-rose-600 flex items-center justify-center">
+                <h1 class="text-3xl md:text-4xl text-white font-extrabold px-6 text-center">Bangladesh Electricity Bill:
+                    Understand Every Line</h1>
+            </div>
+            <div class="p-8 md:p-10 prose prose-lg max-w-none dark:prose-invert">
+                <p class="text-xl break-words">Understanding your Bangladesh electricity bill is crucial for managing
+                    energy costs effectively. With complex tariff structures from DPDC, DESCO, BPDB, and other
+                    providers, many consumers overpay due to billing errors or lack of awareness. This comprehensive
+                    guide helps you decode every line item, identify potential errors, and take control of your
+                    electricity expenses.</p>
+
+                <div class="bg-red-50 dark:bg-red-900/20 p-6 rounded-lg border border-red-200 dark:border-red-700 my-8">
+                    <h3 class="text-red-800 dark:text-red-200 font-bold mb-3">⚠️ Common Bill Issues</h3>
+                    <ul class="text-red-700 dark:text-red-300">
+                        <li>• <strong>Billing errors affect 15-20%</strong> of electricity bills in Bangladesh</li>
+                        <li>• <strong>Estimated readings</strong> can lead to significant over/under billing</li>
+                        <li>• <strong>Wrong tariff application</strong> causes thousands in unnecessary charges</li>
+                        <li>• <strong>Fuel adjustment confusion</strong> adds unexpected costs monthly</li>
+                    </ul>
+                </div>
+
+                <h2>🔍 Anatomy of Bangladesh Electricity Bill Structure</h2>
+                <p>Bangladesh electricity bills follow a standardized format, but understanding each component requires
+                    detailed knowledge of the tariff system. Let's break down every section systematically.</p>
+
+                <h3>1. Consumer Information Section</h3>
+                <div
+                    class="bg-blue-50 dark:bg-blue-900/20 p-6 rounded-lg border border-blue-200 dark:border-blue-700 my-6">
+                    <h4 class="text-blue-800 dark:text-blue-200 font-bold mb-3">🆔 Account Details</h4>
+                    <table class="min-w-full text-sm border border-blue-300">
+                        <thead class="bg-blue-100 dark:bg-blue-800">
+                            <tr>
+                                <th class="px-3 py-2 border">Field</th>
+                                <th class="px-3 py-2 border">Purpose</th>
+                                <th class="px-3 py-2 border">What to Check</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="px-3 py-2 border">Account Number</td>
+                                <td class="px-3 py-2 border">Unique customer identifier</td>
+                                <td class="px-3 py-2 border">Ensure it matches your connection</td>
+                            </tr>
+                            <tr>
+                                <td class="px-3 py-2 border">Meter Number</td>
+                                <td class="px-3 py-2 border">Physical meter identification</td>
+                                <td class="px-3 py-2 border">Verify against meter display</td>
+                            </tr>
+                            <tr>
+                                <td class="px-3 py-2 border">Tariff Code</td>
+                                <td class="px-3 py-2 border">Billing rate category</td>
+                                <td class="px-3 py-2 border">Confirm correct classification (A1, B1, C1, etc.)</td>
+                            </tr>
+                            <tr>
+                                <td class="px-3 py-2 border">Load (kW)</td>
+                                <td class="px-3 py-2 border">Sanctioned maximum demand</td>
+                                <td class="px-3 py-2 border">Should match your connection approval</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3>2. Meter Reading Section</h3>
+                <p>The most critical part of your bill - any errors here cascade through all calculations:</p>
+
+                <div class="grid md:grid-cols-2 gap-6 my-8">
+                    <div
+                        class="bg-green-50 dark:bg-green-900/20 p-6 rounded-lg border border-green-200 dark:border-green-700">
+                        <h4 class="text-green-800 dark:text-green-200 font-bold mb-3">📖 Actual Readings</h4>
+                        <ul class="text-green-700 dark:text-green-300">
+                            <li>• <strong>Previous Reading:</strong> Last month's final reading</li>
+                            <li>• <strong>Current Reading:</strong> This month's meter reading</li>
+                            <li>• <strong>Consumption:</strong> Current - Previous reading</li>
+                            <li>• <strong>Multiplier:</strong> For CT meters (usually 40x, 100x, 200x)</li>
+                            <li>• <strong>Verification:</strong> Check meter photo timestamp</li>
+                        </ul>
+                    </div>
+                    <div
+                        class="bg-yellow-50 dark:bg-yellow-900/20 p-6 rounded-lg border border-yellow-200 dark:border-yellow-700">
+                        <h4 class="text-yellow-800 dark:text-yellow-200 font-bold mb-3">📊 Estimated Readings</h4>
+                        <ul class="text-yellow-700 dark:text-yellow-300">
+                            <li>• <strong>Marked as "EST"</strong> on bill</li>
+                            <li>• <strong>Based on:</strong> Average of last 3-6 months</li>
+                            <li>• <strong>Adjustment:</strong> Next actual reading corrects estimate</li>
+                            <li>• <strong>Risk:</strong> Can lead to large adjustment bills</li>
+                            <li>• <strong>Action:</strong> Request actual reading if estimates persist</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h3>3. Energy Consumption Calculation</h3>
+                <p>Bangladesh uses a slab-wise tariff system where different consumption levels are charged at different
+                    rates. Understanding this is crucial for bill verification.</p>
+
+                <h4>Residential Tariff Structure (2025)</h4>
+                <table class="min-w-full text-sm border border-gray-300 dark:border-gray-600 mb-6">
+                    <thead class="bg-gray-100 dark:bg-gray-700 text-gray-900 dark:text-gray-100">
+                        <tr>
+                            <th class="px-3 py-2 border">Consumption Slab</th>
+                            <th class="px-3 py-2 border">Rate (Tk/kWh)</th>
+                            <th class="px-3 py-2 border">Example Calculation</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="px-3 py-2 border">0-75 kWh</td>
+                            <td class="px-3 py-2 border">4.00</td>
+                            <td class="px-3 py-2 border">75 × 4.00 = 300 Tk</td>
+                        </tr>
+                        <tr>
+                            <td class="px-3 py-2 border">76-200 kWh</td>
+                            <td class="px-3 py-2 border">5.25</td>
+                            <td class="px-3 py-2 border">125 × 5.25 = 656.25 Tk</td>
+                        </tr>
+                        <tr>
+                            <td class="px-3 py-2 border">201-300 kWh</td>
+                            <td class="px-3 py-2 border">5.75</td>
+                            <td class="px-3 py-2 border">100 × 5.75 = 575 Tk</td>
+                        </tr>
+                        <tr>
+                            <td class="px-3 py-2 border">301-400 kWh</td>
+                            <td class="px-3 py-2 border">6.00</td>
+                            <td class="px-3 py-2 border">100 × 6.00 = 600 Tk</td>
+                        </tr>
+                        <tr>
+                            <td class="px-3 py-2 border">401-600 kWh</td>
+                            <td class="px-3 py-2 border">9.35</td>
+                            <td class="px-3 py-2 border">200 × 9.35 = 1,870 Tk</td>
+                        </tr>
+                        <tr>
+                            <td class="px-3 py-2 border">Above 600 kWh</td>
+                            <td class="px-3 py-2 border">12.85</td>
+                            <td class="px-3 py-2 border">Excess × 12.85</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div
+                    class="bg-purple-50 dark:bg-purple-900/20 p-6 rounded-lg border border-purple-200 dark:border-purple-700 my-6">
+                    <h4 class="text-purple-800 dark:text-purple-200 font-bold mb-3">🧮 Slab Calculation Example</h4>
+                    <p class="text-purple-700 dark:text-purple-300 mb-3"><strong>Monthly consumption: 450 kWh</strong>
+                    </p>
+                    <ul class="text-purple-700 dark:text-purple-300">
+                        <li>• First 75 kWh: 75 × 4.00 = 300 Tk</li>
+                        <li>• Next 125 kWh (76-200): 125 × 5.25 = 656.25 Tk</li>
+                        <li>• Next 100 kWh (201-300): 100 × 5.75 = 575 Tk</li>
+                        <li>• Next 100 kWh (301-400): 100 × 6.00 = 600 Tk</li>
+                        <li>• Remaining 50 kWh (401-450): 50 × 9.35 = 467.50 Tk</li>
+                        <li>• <strong>Total Energy Charge: 2,598.75 Tk</strong></li>
+                    </ul>
+                </div>
+
+                <h2>💰 Additional Charges Breakdown</h2>
+                <p>Beyond the basic energy charge, several additional components make up your total bill. Understanding
+                    each is essential for bill verification and cost optimization.</p>
+
+                <h3>Fuel Adjustment Charge</h3>
+                <div
+                    class="bg-orange-50 dark:bg-orange-900/20 p-6 rounded-lg border border-orange-200 dark:border-orange-700 my-6">
+                    <h4 class="text-orange-800 dark:text-orange-200 font-bold mb-3">⛽ Monthly Variable Component</h4>
+                    <ul class="text-orange-700 dark:text-orange-300">
+                        <li>• <strong>Purpose:</strong> Adjusts for fuel cost fluctuations in power generation</li>
+                        <li>• <strong>Calculation:</strong> Fixed rate per kWh × total consumption</li>
+                        <li>• <strong>Rate range:</strong> 0.50-2.50 Tk/kWh (varies monthly)</li>
+                        <li>• <strong>Notification:</strong> Published monthly in newspapers</li>
+                        <li>• <strong>Recent trend:</strong> Increasing due to global fuel price rises</li>
+                    </ul>
+                </div>
+
+                <h3>Fixed Monthly Charges</h3>
+                <table class="min-w-full text-sm border border-gray-300 dark:border-gray-600 mb-6">
+                    <thead class="bg-gray-100 dark:bg-gray-700 text-gray-900 dark:text-gray-100">
+                        <tr>
+                            <th class="px-3 py-2 border">Charge Type</th>
+                            <th class="px-3 py-2 border">Residential</th>
+                            <th class="px-3 py-2 border">Commercial</th>
+                            <th class="px-3 py-2 border">Purpose</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="px-3 py-2 border">Meter Rent</td>
+                            <td class="px-3 py-2 border">25-45 Tk</td>
+                            <td class="px-3 py-2 border">45-85 Tk</td>
+                            <td class="px-3 py-2 border">Meter maintenance and reading</td>
+                        </tr>
+                        <tr>
+                            <td class="px-3 py-2 border">Service Charge</td>
+                            <td class="px-3 py-2 border">8-15 Tk</td>
+                            <td class="px-3 py-2 border">15-25 Tk</td>
+                            <td class="px-3 py-2 border">Administrative costs</td>
+                        </tr>
+                        <tr>
+                            <td class="px-3 py-2 border">Demand Charge</td>
+                            <td class="px-3 py-2 border">Not applicable</td>
+                            <td class="px-3 py-2 border">150-300 Tk/kW</td>
+                            <td class="px-3 py-2 border">Peak demand management</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Tax Components</h3>
+                <ul>
+                    <li><strong>VAT (Value Added Tax):</strong> 5% on subtotal (before VAT)</li>
+                    <li><strong>Electricity Duty:</strong> Varies by area, typically 2-3%</li>
+                    <li><strong>City Corporation Tax:</strong> Applicable in major cities (1-2%)</li>
+                    <li><strong>Rural Electrification Tax:</strong> 2.5% for urban consumers supporting rural expansion
+                    </li>
+                </ul>
+
+                <h2>🚨 Common Billing Errors and Red Flags</h2>
+                <p>Being aware of frequent billing mistakes can save thousands of taka annually. Here are the most
+                    common issues and how to spot them:</p>
+
+                <h3>1. Meter Reading Errors</h3>
+                <div class="bg-red-50 dark:bg-red-900/20 p-6 rounded-lg border border-red-200 dark:border-red-700 my-6">
+                    <h4 class="text-red-800 dark:text-red-200 font-bold mb-3">🔍 Reading Discrepancies</h4>
+                    <ul class="text-red-700 dark:text-red-300">
+                        <li>• <strong>Digit misreading:</strong> 6 read as 8, 3 as 8, etc.</li>
+                        <li>• <strong>Decimal point errors:</strong> Wrong placement affecting calculation</li>
+                        <li>• <strong>Multiple estimated readings:</strong> More than 2 consecutive months</li>
+                        <li>• <strong>Reverse readings:</strong> Consumption showing negative or zero</li>
+                        <li>• <strong>Huge consumption spikes:</strong> >50% increase without reason</li>
+                    </ul>
+                </div>
+
+                <h3>2. Tariff Classification Errors</h3>
+                <table class="min-w-full text-sm border border-gray-300 dark:border-gray-600 mb-6">
+                    <thead class="bg-gray-100 dark:bg-gray-700 text-gray-900 dark:text-gray-100">
+                        <tr>
+                            <th class="px-3 py-2 border">Connection Type</th>
+                            <th class="px-3 py-2 border">Correct Tariff</th>
+                            <th class="px-3 py-2 border">Common Error</th>
+                            <th class="px-3 py-2 border">Impact</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="px-3 py-2 border">Home office/freelancer</td>
+                            <td class="px-3 py-2 border">A1 (Residential)</td>
+                            <td class="px-3 py-2 border">Classified as B1 (Commercial)</td>
+                            <td class="px-3 py-2 border">30-50% higher bills</td>
+                        </tr>
+                        <tr>
+                            <td class="px-3 py-2 border">Small shop in residential area</td>
+                            <td class="px-3 py-2 border">B1 (Small Commercial)</td>
+                            <td class="px-3 py-2 border">B2 (Medium Commercial)</td>
+                            <td class="px-3 py-2 border">20-35% overcharge</td>
+                        </tr>
+                        <tr>
+                            <td class="px-3 py-2 border">Agricultural pump</td>
+                            <td class="px-3 py-2 border">E1 (Agricultural)</td>
+                            <td class="px-3 py-2 border">C1 (Industrial)</td>
+                            <td class="px-3 py-2 border">40-60% excess cost</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>3. Multiplier Calculation Errors</h3>
+                <p>For high-consumption connections using CT (Current Transformer) meters, incorrect multiplier
+                    application is a frequent and costly error:</p>
+                <div
+                    class="bg-yellow-50 dark:bg-yellow-900/20 p-6 rounded-lg border border-yellow-200 dark:border-yellow-700 my-6">
+                    <h4 class="text-yellow-800 dark:text-yellow-200 font-bold mb-3">⚡ CT Meter Multiplier Issues</h4>
+                    <ul class="text-yellow-700 dark:text-yellow-300">
+                        <li>• <strong>Common multipliers:</strong> 40, 100, 200, 400</li>
+                        <li>• <strong>Error example:</strong> 100x multiplier applied as 40x</li>
+                        <li>• <strong>Result:</strong> Consumption appears 2.5x lower than actual</li>
+                        <li>• <strong>Detection:</strong> Unusually low bills despite high usage</li>
+                        <li>• <strong>Adjustment:</strong> Utility will demand back payment</li>
+                    </ul>
+                </div>
+
+                <h2>📋 Step-by-Step Bill Verification Process</h2>
+                <p>Follow this systematic approach every month to ensure billing accuracy and catch errors early:</p>
+
+                <h3>Phase 1: Basic Information Verification (5 minutes)</h3>
+                <div
+                    class="bg-blue-50 dark:bg-blue-900/20 p-6 rounded-lg border border-blue-200 dark:border-blue-700 my-6">
+                    <ol class="text-blue-700 dark:text-blue-300">
+                        <li><strong>Account Details:</strong> Verify account number, meter number, name, address</li>
+                        <li><strong>Billing Period:</strong> Confirm from/to dates (usually 30-31 days)</li>
+                        <li><strong>Tariff Code:</strong> Ensure correct classification for your connection type</li>
+                        <li><strong>Previous Balance:</strong> Check if last month's payment was properly credited</li>
+                    </ol>
+                </div>
+
+                <h3>Phase 2: Meter Reading Analysis (10 minutes)</h3>
+                <div
+                    class="bg-green-50 dark:bg-green-900/20 p-6 rounded-lg border border-green-200 dark:border-green-700 my-6">
+                    <ol class="text-green-700 dark:text-green-300">
+                        <li><strong>Reading Type:</strong> Confirm "Actual" vs "Estimated" marking</li>
+                        <li><strong>Consumption Logic:</strong> Compare with previous months and usage patterns</li>
+                        <li><strong>Photo Verification:</strong> If available, check meter photo timestamp and clarity
+                        </li>
+                        <li><strong>Multiplier Check:</strong> For CT meters, verify correct multiplier application</li>
+                        <li><strong>Unit Calculation:</strong> Current reading - Previous reading = Consumption</li>
+                    </ol>
+                </div>
+
+                <h3>Phase 3: Charge Calculation Verification (15 minutes)</h3>
+                <div
+                    class="bg-purple-50 dark:bg-purple-900/20 p-6 rounded-lg border border-purple-200 dark:border-purple-700 my-6">
+                    <h4 class="text-purple-800 dark:text-purple-200 font-bold mb-3">🧮 Manual Bill Calculation</h4>
+                    <ol class="text-purple-700 dark:text-purple-300">
+                        <li><strong>Energy Charge:</strong> Apply slab-wise tariff to consumption</li>
+                        <li><strong>Fuel Adjustment:</strong> Multiply consumption by current fuel adjustment rate</li>
+                        <li><strong>Fixed Charges:</strong> Add meter rent, service charge, demand charge</li>
+                        <li><strong>Subtotal:</strong> Sum all charges before taxes</li>
+                        <li><strong>Taxes:</strong> Calculate VAT, duty, city tax as applicable</li>
+                        <li><strong>Total Amount:</strong> Compare with bill total</li>
+                    </ol>
+                </div>
+
+                <h2>⚖️ Dispute Resolution Process</h2>
+                <p>When you identify billing errors, follow this structured approach for fastest resolution:</p>
+
+                <h3>Documentation Preparation</h3>
+                <div class="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg my-6">
+                    <h4 class="font-bold mb-3">📁 Required Documents</h4>
+                    <ul>
+                        <li>• Last 6 months' electricity bills</li>
+                        <li>• Meter photos with clear readings and timestamps</li>
+                        <li>• Connection approval letter and tariff classification proof</li>
+                        <li>• Payment receipts for recent bills</li>
+                        <li>• Written complaint letter with specific error details</li>
+                    </ul>
+                </div>
+
+                <h3>Formal Complaint Process</h3>
+                <table class="min-w-full text-sm border border-gray-300 dark:border-gray-600 mb-6">
+                    <thead class="bg-gray-100 dark:bg-gray-700 text-gray-900 dark:text-gray-100">
+                        <tr>
+                            <th class="px-3 py-2 border">Step</th>
+                            <th class="px-3 py-2 border">Action</th>
+                            <th class="px-3 py-2 border">Timeline</th>
+                            <th class="px-3 py-2 border">Escalation</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="px-3 py-2 border">1. Local Office</td>
+                            <td class="px-3 py-2 border">Submit written complaint to customer service</td>
+                            <td class="px-3 py-2 border">7-15 days response</td>
+                            <td class="px-3 py-2 border">If unresolved, proceed to step 2</td>
+                        </tr>
+                        <tr>
+                            <td class="px-3 py-2 border">2. Divisional Office</td>
+                            <td class="px-3 py-2 border">Appeal to divisional customer care</td>
+                            <td class="px-3 py-2 border">15-30 days</td>
+                            <td class="px-3 py-2 border">If unsatisfactory, go to step 3</td>
+                        </tr>
+                        <tr>
+                            <td class="px-3 py-2 border">3. Ombudsman</td>
+                            <td class="px-3 py-2 border">File complaint with electricity ombudsman</td>
+                            <td class="px-3 py-2 border">30-60 days</td>
+                            <td class="px-3 py-2 border">Final administrative remedy</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Meter Testing Request</h3>
+                <p>If you suspect meter malfunction affecting readings:</p>
+                <ul>
+                    <li><strong>Request procedure:</strong> Written application to local office</li>
+                    <li><strong>Testing fee:</strong> 500-1,500 Tk (refunded if meter found faulty)</li>
+                    <li><strong>Timeline:</strong> 15-30 days for test completion</li>
+                    <li><strong>Accuracy standards:</strong> ±2% tolerance for residential meters</li>
+                    <li><strong>Adjustment:</strong> Bills corrected for past 6 months if meter faulty</li>
+                </ul>
+
+                <h2>💡 Pro Tips for Bill Management</h2>
+                <p>Advanced strategies for monitoring and optimizing your electricity billing experience:</p>
+
+                <h3>Monthly Monitoring Routine</h3>
+                <div class="grid md:grid-cols-2 gap-6 my-8">
+                    <div
+                        class="bg-blue-50 dark:bg-blue-900/20 p-6 rounded-lg border border-blue-200 dark:border-blue-700">
+                        <h4 class="text-blue-800 dark:text-blue-200 font-bold mb-3">📱 Digital Tracking</h4>
+                        <ul class="text-blue-700 dark:text-blue-300">
+                            <li>• Take daily meter photos</li>
+                            <li>• Use smartphone apps for consumption tracking</li>
+                            <li>• Set up bill reminder alerts</li>
+                            <li>• Maintain digital payment records</li>
+                            <li>• Monitor fuel adjustment rate changes</li>
+                        </ul>
+                    </div>
+                    <div
+                        class="bg-green-50 dark:bg-green-900/20 p-6 rounded-lg border border-green-200 dark:border-green-700">
+                        <h4 class="text-green-800 dark:text-green-200 font-bold mb-3">📊 Pattern Analysis</h4>
+                        <ul class="text-green-700 dark:text-green-300">
+                            <li>• Compare seasonal consumption trends</li>
+                            <li>• Identify unusual usage spikes</li>
+                            <li>• Track kWh per day averages</li>
+                            <li>• Monitor cost per unit trends</li>
+                            <li>• Analyze peak vs off-peak usage</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h3>Payment Optimization Strategies</h3>
+                <ul>
+                    <li><strong>Early payment discounts:</strong> Some utilities offer 2-3% discounts for advance
+                        payment</li>
+                    <li><strong>Auto-debit setup:</strong> Ensures on-time payment, avoiding late fees</li>
+                    <li><strong>Mobile banking:</strong> Instant payment confirmation and record keeping</li>
+                    <li><strong>Partial payments:</strong> If facing financial difficulty, negotiate payment plans</li>
+                </ul>
+
+                <h2>🔧 Technology Tools for Bill Management</h2>
+                <p>Leverage technology for more efficient electricity bill monitoring and management:</p>
+
+                <h3>Recommended Apps and Tools</h3>
+                <table class="min-w-full text-sm border border-gray-300 dark:border-gray-600 mb-6">
+                    <thead class="bg-gray-100 dark:bg-gray-700 text-gray-900 dark:text-gray-100">
+                        <tr>
+                            <th class="px-3 py-2 border">Tool Type</th>
+                            <th class="px-3 py-2 border">Examples</th>
+                            <th class="px-3 py-2 border">Features</th>
+                            <th class="px-3 py-2 border">Cost</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="px-3 py-2 border">Bill Calculator Apps</td>
+                            <td class="px-3 py-2 border">BD Bill Calculator, Energy Meter</td>
+                            <td class="px-3 py-2 border">Tariff calculation, usage tracking</td>
+                            <td class="px-3 py-2 border">Free</td>
+                        </tr>
+                        <tr>
+                            <td class="px-3 py-2 border">Smart Meters</td>
+                            <td class="px-3 py-2 border">Prepaid digital meters</td>
+                            <td class="px-3 py-2 border">Real-time usage, balance alerts</td>
+                            <td class="px-3 py-2 border">Government installation</td>
+                        </tr>
+                        <tr>
+                            <td class="px-3 py-2 border">Energy Monitors</td>
+                            <td class="px-3 py-2 border">Plug-in power meters</td>
+                            <td class="px-3 py-2 border">Device-level consumption tracking</td>
+                            <td class="px-3 py-2 border">2,000-5,000 Tk</td>
+                        </tr>
+                        <tr>
+                            <td class="px-3 py-2 border">Expense Apps</td>
+                            <td class="px-3 py-2 border">Money Lover, Expense Manager</td>
+                            <td class="px-3 py-2 border">Budget tracking, bill reminders</td>
+                            <td class="px-3 py-2 border">Free/Premium options</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h2>❓ Frequently Asked Questions</h2>
+                <div class="space-y-6 my-8">
+                    <div class="bg-white dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-600">
+                        <h4 class="font-bold text-gray-900 dark:text-gray-100 mb-3">Q: My bill shows 3 months of
+                            estimated readings. What should I do?</h4>
+                        <p class="text-gray-700 dark:text-gray-300">Immediately visit your local utility office with ID
+                            and demand an actual meter reading. Extended estimated readings often lead to large
+                            adjustment bills and indicate systemic meter reading issues that need addressing.</p>
+                    </div>
+
+                    <div class="bg-white dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-600">
+                        <h4 class="font-bold text-gray-900 dark:text-gray-100 mb-3">Q: Can I request a specific meter
+                            reader or reading schedule?</h4>
+                        <p class="text-gray-700 dark:text-gray-300">While you cannot choose specific personnel, you can
+                            request preferred reading times (morning/afternoon) and ensure someone is available during
+                            typical reading windows (8 AM - 4 PM on weekdays).</p>
+                    </div>
+
+                    <div class="bg-white dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-600">
+                        <h4 class="font-bold text-gray-900 dark:text-gray-100 mb-3">Q: What if my consumption suddenly
+                            increases by 100%+ without explanation?</h4>
+                        <p class="text-gray-700 dark:text-gray-300">This indicates a possible meter malfunction, wiring
+                            issues, or theft. Immediately check all electrical connections, request meter testing, and
+                            consider hiring an electrician to inspect your wiring system.</p>
+                    </div>
+
+                    <div class="bg-white dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-600">
+                        <h4 class="font-bold text-gray-900 dark:text-gray-100 mb-3">Q: How long do utility companies
+                            keep billing records?</h4>
+                        <p class="text-gray-700 dark:text-gray-300">Most utility companies maintain detailed billing
+                            records for 3-5 years. However, for dispute resolution, it's recommended to keep your own
+                            records for at least 2 years including bills, payments, and correspondence.</p>
+                    </div>
+
+                    <div class="bg-white dark:bg-gray-800 p-6 rounded-lg border border-gray-200 dark:border-gray-600">
+                        <h4 class="font-bold text-gray-900 dark:text-gray-100 mb-3">Q: Can I switch from postpaid to
+                            prepaid billing?</h4>
+                        <p class="text-gray-700 dark:text-gray-300">Yes, most utility companies offer prepaid meter
+                            conversion. The process typically costs 3,000-8,000 Tk and provides better consumption
+                            control and eliminates billing disputes, though you lose some consumer protections.</p>
+                    </div>
+                </div>
+
+                <div class="bg-gradient-to-r from-red-500 to-rose-600 p-8 rounded-xl text-white my-8">
+                    <h3 class="font-bold text-xl mb-4">🧮 Verify Your Bill Now</h3>
+                    <p class="mb-4">Use our comprehensive Bangladesh electricity bill calculator to verify your current
+                        bill and identify potential savings opportunities.</p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="/"
+                            class="bg-white text-red-600 px-6 py-3 rounded-lg font-bold hover:bg-gray-100 transition-colors text-center">
+                            📊 Check Your Bill
+                        </a>
+                        <a href="/blog/reduce-electricity-bill-bangladesh-40-percent.html"
+                            class="bg-red-700 px-6 py-3 rounded-lg font-bold hover:bg-red-800 transition-colors text-center">
+                            💰 Save on Electricity
+                        </a>
+                    </div>
+                </div>
+
+                <div
+                    class="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg my-8 border border-gray-200 dark:border-gray-600">
+                    <h4 class="font-bold text-gray-900 dark:text-gray-100 mb-3">🎯 Action Checklist</h4>
+                    <ul class="text-gray-700 dark:text-gray-300 space-y-2">
+                        <li>✅ Verify all account information monthly</li>
+                        <li>✅ Check meter readings against actual meter display</li>
+                        <li>✅ Calculate energy charges using current tariff rates</li>
+                        <li>✅ Monitor for consecutive estimated readings</li>
+                        <li>✅ Keep 2+ years of bills and payment records</li>
+                        <li>✅ Set up alerts for unusual consumption patterns</li>
+                        <li>✅ Know your rights and complaint procedures</li>
+                    </ul>
+                </div>
+
+                <p class="text-lg font-medium text-gray-900 dark:text-gray-100 mt-8">Understanding your electricity bill
+                    is the first step toward energy cost control. Regular verification catches errors early, ensures
+                    fair billing, and empowers you to make informed decisions about your electricity usage. Take charge
+                    of your energy expenses today!</p>
+            </div>
+        </article>
+
+        <section class="mt-12">
+            <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-6">Related Articles</h2>
+            <div class="grid md:grid-cols-3 gap-6">
+                <a href="/blog/energy-efficient-appliances-bangladesh.html"
+                    class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow border dark:border-gray-600">Efficient
+                    Appliances</a>
+                <a href="/blog/seasonal-energy-management-bangladesh.html"
+                    class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow border dark:border-gray-600">Seasonal
+                    Management</a>
+                <a href="/blog/reduce-electricity-bill-bangladesh-40-percent.html"
+                    class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow border dark:border-gray-600">Reduce Bill by
+                    40%</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-900 dark:bg-dark-900 text-white py-12 mt-20 transition-colors duration-300">
+        <div class="max-w-6xl mx-auto px-4">
+            <!-- Main Footer Content -->
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <!-- Brand Section -->
+                <div class="md:col-span-1">
+                    <div class="flex items-center space-x-3 mb-4">
+                        <div class="w-8 h-8 bg-blue-600 dark:bg-blue-500 rounded-lg flex items-center justify-center">
+                            <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                            </svg>
+                        </div>
+                        <span class="font-bold text-lg">BD Bill Calculator</span>
+                    </div>
+                    <p class="text-gray-400 dark:text-dark-300 text-sm leading-relaxed break-words">
+                        Expert energy advice and electricity bill calculator for Bangladesh families. Save money with
+                        smart energy management.
+                    </p>
+                    <div class="flex space-x-3 mt-4">
+                        <a href="https://www.facebook.com/sowravhasan0" target="_blank" rel="noopener noreferrer"
+                            class="text-gray-400 dark:text-dark-400 hover:text-white dark:hover:text-dark-200 transition-colors">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                            </svg>
+                        </a>
+                        <a href="https://www.instagram.com/sowrav_hasan0/" target="_blank" rel="noopener noreferrer"
+                            class="text-gray-400 dark:text-dark-400 hover:text-white dark:hover:text-dark-200 transition-colors">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.40z" />
+                            </svg>
+                        </a>
+                        <a href="https://x.com/sowrav_hasan0" target="_blank" rel="noopener noreferrer"
+                            class="text-gray-400 dark:text-dark-400 hover:text-white dark:hover:text-dark-200 transition-colors">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="font-semibold text-white mb-4">Quick Links</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="/"
+                                class="text-gray-400 dark:text-dark-400 hover:text-white dark:hover:text-dark-200 transition-colors">Electricity
+                                Calculator</a></li>
+                        <li><a href="/blog.html"
+                                class="text-gray-400 dark:text-dark-400 hover:text-white dark:hover:text-dark-200 transition-colors">Energy
+                                Blog</a></li>
+                        <li><a href="/energy-tips.html"
+                                class="text-gray-400 dark:text-dark-400 hover:text-white dark:hover:text-dark-200 transition-colors">Energy
+                                Tips</a></li>
+                        <li><a href="/about.html"
+                                class="text-gray-400 dark:text-dark-400 hover:text-white dark:hover:text-dark-200 transition-colors">About
+                                Us</a></li>
+                        <li><a href="/contact.html"
+                                class="text-gray-400 dark:text-dark-400 hover:text-white dark:hover:text-dark-200 transition-colors">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Legal & Support -->
+                <div>
+                    <h3 class="font-semibold text-white mb-4">Legal & Support</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="/privacy.html"
+                                class="text-gray-400 dark:text-dark-400 hover:text-white dark:hover:text-dark-200 transition-colors">Privacy
+                                Policy</a></li>
+                        <li><a href="/terms.html"
+                                class="text-gray-400 dark:text-dark-400 hover:text-white dark:hover:text-dark-200 transition-colors">Terms
+                                of Service</a></li>
+                        <li><a href="/sitemap.xml"
+                                class="text-gray-400 dark:text-dark-400 hover:text-white dark:hover:text-dark-200 transition-colors">Sitemap</a>
+                        </li>
+                        <li><a href="/contact.html"
+                                class="text-gray-400 dark:text-dark-400 hover:text-white dark:hover:text-dark-200 transition-colors">Support</a>
+                        </li>
+                        <li><a href="#faq"
+                                class="text-gray-400 dark:text-dark-400 hover:text-white dark:hover:text-dark-200 transition-colors">FAQ</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div>
+                    <h3 class="font-semibold text-white mb-4">Get In Touch</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li class="flex items-center space-x-2 break-words">
+                            <svg class="w-4 h-4 text-gray-400 dark:text-dark-400" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
+                                </path>
+                            </svg>
+                            <span class="text-gray-400 dark:text-dark-400">sowravhasan101@gmail.com</span>
+                        </li>
+                        <li class="flex items-center space-x-2 break-words">
+                            <svg class="w-4 h-4 text-gray-400 dark:text-dark-400" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z">
+                                </path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                            </svg>
+                            <span class="text-gray-400 dark:text-dark-400">Dhaka, Bangladesh</span>
+                        </li>
+                        <li class="flex items-center space-x-2 break-words">
+                            <svg class="w-4 h-4 text-gray-400 dark:text-dark-400" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                            <span class="text-gray-400 dark:text-dark-400">24/7 Support</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Bottom Footer -->
+            <div class="border-t border-gray-800 dark:border-dark-600 pt-6">
+                <div class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+                    <div class="text-center md:text-left break-words">
+                        <p class="text-gray-500 dark:text-dark-400 text-sm break-words">• 2025 BD Bill Calculator. All
+                            rights
+                            reserved.</p>
+                        <p class="text-gray-500 dark:text-dark-400 text-xs mt-1 break-words">
+                            Helping Bangladesh families save on electricity bills since 2025
+                        </p>
+                    </div>
+                    <div class="text-center md:text-right break-words">
+                        <p class="text-gray-500 dark:text-dark-400 text-sm break-words">
+                            Crafted with ❤️ by
+                            <a href="https://sowravhasan.vercel.app/" target="_blank" rel="noopener noreferrer"
+                                class="text-blue-400 hover:text-blue-300 font-semibold transition-colors duration-200">
+                                Sowrav Hasan
+                            </a>
+                        </p>
+                        <p class="text-gray-600 dark:text-dark-500 text-xs mt-1 break-words">Full Stack Developer &
+                            Energy Expert
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton?.addEventListener('click', () => {
+            mobileMenu?.classList.toggle('hidden');
+        });
+    </script>
+</body>
+
+</html>

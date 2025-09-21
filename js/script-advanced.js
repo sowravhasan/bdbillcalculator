@@ -78,6 +78,52 @@ function setupEventListeners() {
     darkModeToggleMobile.addEventListener("click", toggleDarkMode);
   }
 
+  // Mobile Menu Toggle
+  const mobileMenuToggle = document.getElementById("mobile-menu-toggle");
+  const mobileMenu = document.getElementById("mobile-menu");
+  const hamburgerIcon = document.getElementById("hamburger-icon");
+  const closeIcon = document.getElementById("close-icon");
+
+  if (mobileMenuToggle && mobileMenu) {
+    mobileMenuToggle.addEventListener("click", function () {
+      const isHidden = mobileMenu.classList.contains("hidden");
+
+      if (isHidden) {
+        // Show mobile menu
+        mobileMenu.classList.remove("hidden");
+        if (hamburgerIcon) hamburgerIcon.classList.add("hidden");
+        if (closeIcon) closeIcon.classList.remove("hidden");
+      } else {
+        // Hide mobile menu
+        mobileMenu.classList.add("hidden");
+        if (hamburgerIcon) hamburgerIcon.classList.remove("hidden");
+        if (closeIcon) closeIcon.classList.add("hidden");
+      }
+    });
+
+    // Close mobile menu when clicking on a link
+    const mobileMenuLinks = mobileMenu.querySelectorAll("a");
+    mobileMenuLinks.forEach((link) => {
+      link.addEventListener("click", function () {
+        mobileMenu.classList.add("hidden");
+        if (hamburgerIcon) hamburgerIcon.classList.remove("hidden");
+        if (closeIcon) closeIcon.classList.add("hidden");
+      });
+    });
+
+    // Close mobile menu when clicking outside
+    document.addEventListener("click", function (e) {
+      if (
+        !mobileMenuToggle.contains(e.target) &&
+        !mobileMenu.contains(e.target)
+      ) {
+        mobileMenu.classList.add("hidden");
+        if (hamburgerIcon) hamburgerIcon.classList.remove("hidden");
+        if (closeIcon) closeIcon.classList.add("hidden");
+      }
+    });
+  }
+
   // Quick Add Buttons - Use event delegation since buttons are added dynamically
   document.addEventListener("click", function (e) {
     if (e.target.classList.contains("quick-add-btn")) {

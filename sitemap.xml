@@ -6,7 +6,7 @@
     <!-- Main Page -->
     <url>
         <loc>https://bdbillcalculator.netlify.app/</loc>
-        <lastmod>2025-08-26</lastmod>
+        <lastmod>2025-09-19</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
@@ -109,18 +109,112 @@
 
     <!-- Privacy Policy -->
     <url>
-        <loc>https://bdbillcalculator.netlify.app/privacy-policy</loc>
-        <lastmod>2025-08-25</lastmod>
+        <loc>https://bdbillcalculator.netlify.app/privacy.html</loc>
+        <lastmod>2025-09-19</lastmod>
         <changefreq>yearly</changefreq>
-        <priority>0.3</priority>
+        <priority>0.4</priority>
     </url>
 
     <!-- Terms of Service -->
     <url>
-        <loc>https://bdbillcalculator.netlify.app/terms-of-service</loc>
-        <lastmod>2025-08-25</lastmod>
+        <loc>https://bdbillcalculator.netlify.app/terms.html</loc>
+        <lastmod>2025-09-19</lastmod>
         <changefreq>yearly</changefreq>
-        <priority>0.3</priority>
+        <priority>0.4</priority>
+    </url>
+
+    <!-- Energy Tips Page -->
+    <url>
+        <loc>https://bdbillcalculator.netlify.app/energy-tips.html</loc>
+        <lastmod>2025-09-19</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <!-- About Page -->
+    <url>
+        <loc>https://bdbillcalculator.netlify.app/about.html</loc>
+        <lastmod>2025-09-19</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.4</priority>
+    </url>
+
+    <!-- Contact Page -->
+    <url>
+        <loc>https://bdbillcalculator.netlify.app/contact.html</loc>
+        <lastmod>2025-09-19</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.4</priority>
+    </url>
+
+    <!-- Blog Listing -->
+    <url>
+        <loc>https://bdbillcalculator.netlify.app/blog.html</loc>
+        <lastmod>2025-09-19</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+    <!-- Blog Articles -->
+    <url>
+        <loc>https://bdbillcalculator.netlify.app/blog/reduce-electricity-bill-bangladesh-40-percent.html</loc>
+        <lastmod>2025-09-19</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://bdbillcalculator.netlify.app/blog/smart-ac-usage-bangladesh-summer.html</loc>
+        <lastmod>2025-09-19</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://bdbillcalculator.netlify.app/blog/load-shedding-management-guide.html</loc>
+        <lastmod>2025-09-19</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://bdbillcalculator.netlify.app/blog/energy-efficient-appliances-bangladesh.html</loc>
+        <lastmod>2025-09-19</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://bdbillcalculator.netlify.app/blog/solar-panel-guide-bangladesh-homes.html</loc>
+        <lastmod>2025-09-19</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://bdbillcalculator.netlify.app/blog/smart-home-technology-bangladesh.html</loc>
+        <lastmod>2025-09-19</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://bdbillcalculator.netlify.app/blog/business-energy-audit-bangladesh.html</loc>
+        <lastmod>2025-09-19</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://bdbillcalculator.netlify.app/blog/kitchen-energy-efficiency-tips.html</loc>
+        <lastmod>2025-09-19</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://bdbillcalculator.netlify.app/blog/seasonal-energy-management-bangladesh.html</loc>
+        <lastmod>2025-09-19</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    <url>
+        <loc>https://bdbillcalculator.netlify.app/blog/electricity-bill-analysis-guide.html</loc>
+        <lastmod>2025-09-19</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
     </url>
 
 </urlset>

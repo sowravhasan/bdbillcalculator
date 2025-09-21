@@ -92,7 +92,7 @@ ErrorDocument 404 /404.html
     AddType font/otf .otf
 </IfModule>
 
-# SEO-friendly URLs for calculator pages
+# SEO-friendly URLs and redirects
 RewriteRule ^bpdb-calculator/?$ /?provider=bpdb [L,QSA]
 RewriteRule ^desco-calculator/?$ /?provider=desco [L,QSA]
 RewriteRule ^dpdc-calculator/?$ /?provider=dpdc [L,QSA]
@@ -100,6 +100,16 @@ RewriteRule ^wzpdcl-calculator/?$ /?provider=wzpdcl [L,QSA]
 RewriteRule ^bangladesh-electricity-rates-2025/?$ /?page=rates [L,QSA]
 RewriteRule ^energy-saving-tips-bangladesh/?$ /?page=tips [L,QSA]
 RewriteRule ^appliance-power-consumption-bangladesh/?$ /?page=appliances [L,QSA]
+
+# Redirect old URLs to new structure
+RedirectMatch 301 ^/privacy-policy/?$ /privacy.html
+RedirectMatch 301 ^/terms-of-service/?$ /terms.html
+RedirectMatch 301 ^/about/?$ /about.html
+RedirectMatch 301 ^/contact/?$ /contact.html
+RedirectMatch 301 ^/energy-tips/?$ /energy-tips.html
+
+# Blog URL optimizations
+RewriteRule ^blog/?$ /blog.html [L,R=301]
 
 # Prevent access to sensitive files
 <Files ~ "^\.">
@@ -112,7 +122,17 @@ RewriteRule ^appliance-power-consumption-bangladesh/?$ /?page=appliances [L,QSA]
     Deny from all
 </Files>
 
-# Allow search engine bots
-<FilesMatch "(robots\.txt|sitemap\.xml)$">
+# Allow search engine bots and important files
+<FilesMatch "(robots\.txt|sitemap\.xml|manifest\.json|favicon\.ico)$">
     Allow from all
 </FilesMatch>
+
+# Allow blog directory
+<Directory "/blog">
+    Allow from all
+</Directory>
+
+# Set proper MIME type for manifest.json
+<Files "manifest.json">
+    Header set Content-Type "application/manifest+json"
+</Files>
