@@ -1,6 +1,6 @@
 # ⚡ Bangladesh Electricity Bill Calculator
 
-**Free BD Bill Calculator 2025 | Calculate electricity costs instantly for BPDB, DESCO, DPDC, WZPDCL**
+**Free BD Bill Calculator 2026 | Calculate electricity costs instantly for BPDB, DESCO, DPDC, WZPDCL**
 
 [![Live Demo](https://img.shields.io/badge/Live-Demo-blue?style=for-the-badge)](https://bdbillcalculator.netlify.app/)
 [![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](LICENSE)
@@ -8,7 +8,7 @@
 
 ## 🎯 Purpose
 
-The **Bangladesh Electricity Bill Calculator** is a free, comprehensive web application designed to help users in Bangladesh accurately estimate their monthly electricity bills. With rising energy costs and the need for better budget planning, this tool provides instant calculations based on current 2025 electricity rates from major utility providers.
+The **Bangladesh Electricity Bill Calculator** is a free, comprehensive web application designed to help users in Bangladesh accurately estimate their monthly electricity bills. With rising energy costs and the need for better budget planning, this tool provides instant calculations based on current 2026 electricity rates from major utility providers.
 
 ### 🌟 Why This Tool Matters
 
@@ -16,7 +16,7 @@ The **Bangladesh Electricity Bill Calculator** is a free, comprehensive web appl
 - **Energy Awareness**: Understand which appliances consume the most electricity
 - **Cost Savings**: Get personalized recommendations to reduce your electricity bill
 - **Accessibility**: 100% free tool accessible to everyone in Bangladesh
-- **Accuracy**: Uses official 2025 tariff rates from BPDB, DESCO, DPDC, WZPDCL
+- **Accuracy**: Uses official 2026 tariff rates from BPDB, DESCO, DPDC, WZPDCL
 
 ## ✨ Key Features
 
@@ -169,7 +169,7 @@ The **Bangladesh Electricity Bill Calculator** is a free, comprehensive web appl
 - **BREB** (Bangladesh Rural Electrification Board)
 - **Custom Rates** for other providers
 
-### **Rate Information (2025)**
+### **Rate Information (2026)**
 - **BPDB**: ৳3.5 - ৳9.9 per kWh
 - **DESCO**: ৳4.5 - ৳8.5 per kWh
 - **DPDC**: ৳4.0 - ৳9.0 per kWh
@@ -336,7 +336,7 @@ This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) 
 - **Open Source Community** for tools and inspiration
 
 ### **Resources Used**
-- **Official BPDB Rate Charts** (2025)
+- **Official BPDB Rate Charts** (2026)
 - **Government Energy Policy Documents**
 - **Bangladesh Electricity Tariff Guidelines**
 - **Accessibility Guidelines (WCAG 2.1)**
@@ -366,7 +366,7 @@ This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) 
 - **Supported Appliances**: 50+ pre-configured
 - **Utility Companies**: 5+ supported
 - **Languages**: 2 (English, limited Bengali)
-- **Launch Date**: August 2025
+- **Launch Date**: August 2026
 
 ### **Usage Statistics**
 - **Target Audience**: 100M+ Bangladesh residents

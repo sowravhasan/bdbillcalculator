@@ -7,7 +7,7 @@
   <!-- Main Homepage -->
   <url>
     <loc>https://bdbillcalculator.netlify.app/</loc>
-    <lastmod>2025-09-22T13:00:44+00:00</lastmod>
+    <lastmod>2026-03-22T13:00:44+00:00</lastmod>
     <priority>1.00</priority>
     <changefreq>weekly</changefreq>
   </url>
@@ -15,7 +15,7 @@
   <!-- About -->
   <url>
     <loc>https://bdbillcalculator.netlify.app/about</loc>
-    <lastmod>2025-09-22T13:00:44+00:00</lastmod>
+    <lastmod>2026-03-22T13:00:44+00:00</lastmod>
     <priority>0.80</priority>
     <changefreq>yearly</changefreq>
   </url>
@@ -23,28 +23,28 @@
   <!-- Blog -->
   <url>
     <loc>https://bdbillcalculator.netlify.app/blog</loc>
-    <lastmod>2025-09-22T13:00:44+00:00</lastmod>
+    <lastmod>2026-03-22T13:00:44+00:00</lastmod>
     <priority>0.80</priority>
   </url>
 
   <!-- Contact -->
   <url>
     <loc>https://bdbillcalculator.netlify.app/contact</loc>
-    <lastmod>2025-09-22T13:00:44+00:00</lastmod>
+    <lastmod>2026-03-22T13:00:44+00:00</lastmod>
     <priority>0.80</priority>
   </url>
 
   <!-- Energy Tips -->
   <url>
     <loc>https://bdbillcalculator.netlify.app/energy-tips</loc>
-    <lastmod>2025-09-22T13:00:44+00:00</lastmod>
+    <lastmod>2026-03-22T13:00:44+00:00</lastmod>
     <priority>0.80</priority>
   </url>
 
   <!-- Privacy Policy -->
   <url>
     <loc>https://bdbillcalculator.netlify.app/privacy-policy</loc>
-    <lastmod>2025-08-25</lastmod>
+    <lastmod>2026-03-25</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
@@ -52,7 +52,7 @@
   <!-- Terms of Service -->
   <url>
     <loc>https://bdbillcalculator.netlify.app/terms-of-service</loc>
-    <lastmod>2025-08-25</lastmod>
+    <lastmod>2026-03-25</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
@@ -60,77 +60,77 @@
   <!-- Blog Posts -->
   <url>
     <loc>https://bdbillcalculator.netlify.app/blog/reduce-electricity-bill-bangladesh-40-percent</loc>
-    <lastmod>2025-09-22T13:00:44+00:00</lastmod>
+    <lastmod>2026-03-22T13:00:44+00:00</lastmod>
     <priority>0.64</priority>
   </url>
   <url>
     <loc>https://bdbillcalculator.netlify.app/blog/energy-efficient-appliances-bangladesh</loc>
-    <lastmod>2025-09-22T13:00:44+00:00</lastmod>
+    <lastmod>2026-03-22T13:00:44+00:00</lastmod>
     <priority>0.64</priority>
   </url>
   <url>
     <loc>https://bdbillcalculator.netlify.app/blog/smart-ac-usage-bangladesh-summer</loc>
-    <lastmod>2025-09-22T13:00:44+00:00</lastmod>
+    <lastmod>2026-03-22T13:00:44+00:00</lastmod>
     <priority>0.64</priority>
   </url>
   <url>
     <loc>https://bdbillcalculator.netlify.app/blog/load-shedding-management-guide</loc>
-    <lastmod>2025-09-22T13:00:44+00:00</lastmod>
+    <lastmod>2026-03-22T13:00:44+00:00</lastmod>
     <priority>0.64</priority>
   </url>
   <url>
     <loc>https://bdbillcalculator.netlify.app/blog/solar-panel-guide-bangladesh-homes</loc>
-    <lastmod>2025-09-22T13:00:44+00:00</lastmod>
+    <lastmod>2026-03-22T13:00:44+00:00</lastmod>
     <priority>0.64</priority>
   </url>
   <url>
     <loc>https://bdbillcalculator.netlify.app/blog/smart-home-technology-bangladesh</loc>
-    <lastmod>2025-09-22T13:00:44+00:00</lastmod>
+    <lastmod>2026-03-22T13:00:44+00:00</lastmod>
     <priority>0.64</priority>
   </url>
   <url>
     <loc>https://bdbillcalculator.netlify.app/blog/business-energy-audit-bangladesh</loc>
-    <lastmod>2025-09-22T13:00:44+00:00</lastmod>
+    <lastmod>2026-03-22T13:00:44+00:00</lastmod>
     <priority>0.64</priority>
   </url>
   <url>
     <loc>https://bdbillcalculator.netlify.app/blog/kitchen-energy-efficiency-tips</loc>
-    <lastmod>2025-09-22T13:00:44+00:00</lastmod>
+    <lastmod>2026-03-22T13:00:44+00:00</lastmod>
     <priority>0.64</priority>
   </url>
   <url>
     <loc>https://bdbillcalculator.netlify.app/blog/seasonal-energy-management-bangladesh</loc>
-    <lastmod>2025-09-22T13:00:44+00:00</lastmod>
+    <lastmod>2026-03-22T13:00:44+00:00</lastmod>
     <priority>0.64</priority>
   </url>
   <url>
     <loc>https://bdbillcalculator.netlify.app/blog/electricity-bill-analysis-guide</loc>
-    <lastmod>2025-09-22T13:00:44+00:00</lastmod>
+    <lastmod>2026-03-22T13:00:44+00:00</lastmod>
     <priority>0.64</priority>
   </url>
 
   <!-- Sections -->
   <url>
     <loc>https://bdbillcalculator.netlify.app/#faq</loc>
-    <lastmod>2025-08-25</lastmod>
+    <lastmod>2026-03-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://bdbillcalculator.netlify.app/#calculator</loc>
-    <lastmod>2025-08-25</lastmod>
+    <lastmod>2026-03-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://bdbillcalculator.netlify.app/#energy-tips</loc>
-    <lastmod>2025-08-25</lastmod>
+    <lastmod>2026-03-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://bdbillcalculator.netlify.app/#appliance-guide</loc>
-    <lastmod>2025-08-25</lastmod>
+    <lastmod>2026-03-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -138,45 +138,45 @@
   <!-- Calculators -->
   <url>
     <loc>https://bdbillcalculator.netlify.app/bpdb-calculator</loc>
-    <lastmod>2025-08-25</lastmod>
+    <lastmod>2026-03-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://bdbillcalculator.netlify.app/desco-calculator</loc>
-    <lastmod>2025-08-25</lastmod>
+    <lastmod>2026-03-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://bdbillcalculator.netlify.app/dpdc-calculator</loc>
-    <lastmod>2025-08-25</lastmod>
+    <lastmod>2026-03-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://bdbillcalculator.netlify.app/wzpdcl-calculator</loc>
-    <lastmod>2025-08-25</lastmod>
+    <lastmod>2026-03-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <!-- Info Pages -->
   <url>
-    <loc>https://bdbillcalculator.netlify.app/bangladesh-electricity-rates-2025</loc>
-    <lastmod>2025-08-25</lastmod>
+    <loc>https://bdbillcalculator.netlify.app/bangladesh-electricity-rates-2026</loc>
+    <lastmod>2026-03-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://bdbillcalculator.netlify.app/energy-saving-tips-bangladesh</loc>
-    <lastmod>2025-08-25</lastmod>
+    <lastmod>2026-03-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://bdbillcalculator.netlify.app/appliance-power-consumption-bangladesh</loc>
-    <lastmod>2025-08-25</lastmod>
+    <lastmod>2026-03-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
